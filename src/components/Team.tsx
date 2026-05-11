@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const featured = [
-  { name: "Charmaine", title: "Owner / Stylist / Makeup Artist", gradient: "from-[#C9A96E] to-[#b8936a]" },
-  { name: "Holly", title: "Color Specialist", gradient: "from-[#D4A5A5] to-[#C9A96E]" },
-  { name: "Martha B.", title: "Stylist / Facials / Waxing", gradient: "from-[#8A7F78] to-[#C9A96E]" },
-  { name: "Rianna", title: "Color & Smoothing Specialist", gradient: "from-[#b8936a] to-[#D4A5A5]" },
+  { name: "Charmaine", title: "Owner / Stylist / Makeup Artist", gradient: "from-[#E8D8C3] to-[#d4c4ad]" },
+  { name: "Holly", title: "Color Specialist", gradient: "from-[#D8A7A7] to-[#E8D8C3]" },
+  { name: "Martha B.", title: "Stylist / Facials / Waxing", gradient: "from-[#A78B7A] to-[#E8D8C3]" },
+  { name: "Rianna", title: "Color & Smoothing Specialist", gradient: "from-[#d4c4ad] to-[#D8A7A7]" },
 ];
 
 export default function Team() {

@@ -6,7 +6,7 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, #2C2523 0%, #231e1b 50%, #1a1210 100%)",
+            "linear-gradient(135deg, #2B211D 0%, #1f1915 50%, #150e0b 100%)",
         }}
       />
 
@@ -15,7 +15,7 @@ export default function Hero() {
         className="absolute inset-0 opacity-20"
         style={{
           background:
-            "radial-gradient(ellipse at 70% 20%, #C9A96E 0%, transparent 60%)",
+            "radial-gradient(ellipse at 70% 20%, #E8D8C3 0%, transparent 60%)",
         }}
       />
 

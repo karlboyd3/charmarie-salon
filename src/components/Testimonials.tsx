@@ -27,7 +27,7 @@ function StarRating() {
           key={i}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          fill="#C9A96E"
+          fill="#E8D8C3"
           className="w-4 h-4"
         >
           <path
@@ -45,7 +45,7 @@ export default function Testimonials() {
   return (
     <section
       className="py-24 lg:py-32 px-4"
-      style={{ backgroundColor: "#2C2523" }}
+      style={{ backgroundColor: "#2B211D" }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -64,7 +64,7 @@ export default function Testimonials() {
             <div
               key={review.name}
               className="rounded-2xl p-8"
-              style={{ backgroundColor: "#3a3028" }}
+              style={{ backgroundColor: "#3a2e28" }}
             >
               <StarRating />
               <p className="font-sans text-cream/80 italic leading-relaxed mb-6 text-sm">

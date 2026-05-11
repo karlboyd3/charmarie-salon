@@ -2,12 +2,12 @@
 
 @theme {
   /* Brand Colors */
-  --color-cream: #FAF8F5;
-  --color-espresso: #2C2523;
-  --color-gold: #C9A96E;
-  --color-blush: #D4A5A5;
-  --color-muted: #8A7F78;
-  --color-card-dark: #3a3028;
+  --color-cream: #FAF6F0;
+  --color-espresso: #2B211D;
+  --color-gold: #E8D8C3;
+  --color-blush: #D8A7A7;
+  --color-muted: #A78B7A;
+  --color-card-dark: #3a2e28;
 
   /* Typography */
   --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
@@ -19,8 +19,8 @@ html {
 }
 
 body {
-  background-color: #FAF8F5;
-  color: #2C2523;
+  background-color: #FAF6F0;
+  color: #2B211D;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }

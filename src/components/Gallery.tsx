@@ -18,12 +18,12 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 const placeholders = [
-  { gradient: "from-[#C9A96E] to-[#b8936a]" },
-  { gradient: "from-[#D4A5A5] to-[#c09090]" },
-  { gradient: "from-[#8A7F78] to-[#6b6060]" },
-  { gradient: "from-[#b8936a] to-[#D4A5A5]" },
-  { gradient: "from-[#c09090] to-[#C9A96E]" },
-  { gradient: "from-[#2C2523] to-[#8A7F78]" },
+  { gradient: "from-[#E8D8C3] to-[#d4c4ad]" },
+  { gradient: "from-[#D8A7A7] to-[#c49898]" },
+  { gradient: "from-[#A78B7A] to-[#8a7066]" },
+  { gradient: "from-[#d4c4ad] to-[#D8A7A7]" },
+  { gradient: "from-[#c49898] to-[#E8D8C3]" },
+  { gradient: "from-[#2B211D] to-[#A78B7A]" },
 ];
 
 export default function Gallery() {

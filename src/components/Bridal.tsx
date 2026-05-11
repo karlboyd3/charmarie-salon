@@ -8,7 +8,7 @@ export default function Bridal() {
             className="relative min-h-72 lg:min-h-full"
             style={{
               background:
-                "linear-gradient(135deg, #D4A5A5 0%, #C9A96E 40%, #b8936a 70%, #2C2523 100%)",
+                "linear-gradient(135deg, #D8A7A7 0%, #E8D8C3 40%, #d4c4ad 70%, #2B211D 100%)",
             }}
           >
             {/* Overlaid decorative text */}

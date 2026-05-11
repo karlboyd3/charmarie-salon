@@ -12,18 +12,18 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 const placeholders = [
-  { gradient: "from-[#C9A96E] to-[#b8936a]", label: "Balayage by Holly" },
-  { gradient: "from-[#D4A5A5] to-[#c09090]", label: "Color by Rianna" },
-  { gradient: "from-[#8A7F78] to-[#6b6060]", label: "Cut by Kathleen" },
-  { gradient: "from-[#b8936a] to-[#D4A5A5]", label: "Extensions" },
-  { gradient: "from-[#c09090] to-[#C9A96E]", label: "Bridal Hair" },
-  { gradient: "from-[#2C2523] to-[#8A7F78]", label: "Color by Martha" },
-  { gradient: "from-[#C9A96E] to-[#D4A5A5]", label: "Foiliyage" },
-  { gradient: "from-[#D4A5A5] to-[#8A7F78]", label: "Highlights" },
-  { gradient: "from-[#b8936a] to-[#2C2523]", label: "Color Correction" },
-  { gradient: "from-[#8A7F78] to-[#C9A96E]", label: "Blonde by Holly" },
-  { gradient: "from-[#c09090] to-[#b8936a]", label: "Lashes" },
-  { gradient: "from-[#2C2523] to-[#C9A96E]", label: "Updo" },
+  { gradient: "from-[#E8D8C3] to-[#d4c4ad]", label: "Balayage by Holly" },
+  { gradient: "from-[#D8A7A7] to-[#c49898]", label: "Color by Rianna" },
+  { gradient: "from-[#A78B7A] to-[#8a7066]", label: "Cut by Kathleen" },
+  { gradient: "from-[#d4c4ad] to-[#D8A7A7]", label: "Extensions" },
+  { gradient: "from-[#c49898] to-[#E8D8C3]", label: "Bridal Hair" },
+  { gradient: "from-[#2B211D] to-[#A78B7A]", label: "Color by Martha" },
+  { gradient: "from-[#E8D8C3] to-[#D8A7A7]", label: "Foiliyage" },
+  { gradient: "from-[#D8A7A7] to-[#A78B7A]", label: "Highlights" },
+  { gradient: "from-[#d4c4ad] to-[#2B211D]", label: "Color Correction" },
+  { gradient: "from-[#A78B7A] to-[#E8D8C3]", label: "Blonde by Holly" },
+  { gradient: "from-[#c49898] to-[#d4c4ad]", label: "Lashes" },
+  { gradient: "from-[#2B211D] to-[#E8D8C3]", label: "Updo" },
 ];
 
 export default function GalleryPage() {

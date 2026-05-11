@@ -14,7 +14,7 @@ export default function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps
         className="pt-32 pb-16 px-4 text-center"
         style={{
           background:
-            "linear-gradient(135deg, #2C2523 0%, #231e1b 60%, #1a1210 100%)",
+            "linear-gradient(135deg, #2B211D 0%, #1f1915 60%, #150e0b 100%)",
         }}
       >
         {eyebrow && (
