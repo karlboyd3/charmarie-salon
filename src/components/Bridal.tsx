@@ -22,7 +22,7 @@ export default function Bridal() {
           {/* Right: content */}
           <div className="flex items-center px-8 py-16 lg:px-16 lg:py-20 bg-champagne-wash">
             <div className="max-w-lg">
-              <p className="font-sans text-gold text-xs tracking-[0.25em] uppercase mb-5">
+              <p className="font-sans text-muted text-xs tracking-[0.25em] uppercase mb-5">
                 Bridal &amp; Wedding
               </p>
               <h2 className="font-display font-semibold text-4xl sm:text-5xl text-espresso leading-tight mb-6">
@@ -43,7 +43,7 @@ export default function Bridal() {
                   (tag) => (
                     <span
                       key={tag}
-                      className="font-sans text-xs text-gold border border-gold/30 px-3 py-1.5 rounded-full"
+                      className="font-sans text-xs text-muted border border-muted/30 px-3 py-1.5 rounded-full"
                     >
                       {tag}
                     </span>

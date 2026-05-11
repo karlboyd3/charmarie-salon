@@ -55,8 +55,8 @@ export default function BridalPage() {
       <main className="bg-cream py-16 px-4">
         <div className="max-w-4xl mx-auto space-y-16">
           {/* Intro */}
-          <div className="bg-white rounded-2xl p-10 border border-gold/30">
-            <p className="font-sans text-gold text-xs tracking-widest uppercase mb-4">Why CharMarie for Your Wedding</p>
+          <div className="bg-white rounded-2xl p-10 border border-muted/30">
+            <p className="font-sans text-muted text-xs tracking-widest uppercase mb-4">Why CharMarie for Your Wedding</p>
             <p className="font-display font-semibold text-3xl text-espresso mb-4">
               Years of Experience. Endless Attention to Detail.
             </p>
@@ -68,7 +68,7 @@ export default function BridalPage() {
             </p>
             <div className="flex flex-wrap gap-3 mt-6">
               {["Bridal Trials", "Day-Of Glam", "Full Wedding Party", "On-Location Services", "Makeup & Hair", "False Lashes Included"].map((tag) => (
-                <span key={tag} className="font-sans text-xs text-gold border border-gold/30 rounded-full px-3 py-1.5">{tag}</span>
+                <span key={tag} className="font-sans text-xs text-muted border border-muted/30 rounded-full px-3 py-1.5">{tag}</span>
               ))}
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function BridalPage() {
                 <details key={q} className="bg-white rounded-2xl border border-espresso/8 group">
                   <summary className="px-8 py-5 cursor-pointer font-sans font-medium text-espresso list-none flex justify-between items-center gap-4">
                     {q}
-                    <svg className="w-4 h-4 text-gold flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
@@ -109,7 +109,7 @@ export default function BridalPage() {
 
           {/* CTA */}
           <div className="bg-espresso rounded-2xl p-10 text-center">
-            <p className="font-sans text-gold text-xs tracking-widest uppercase mb-3">Ready to Begin?</p>
+            <p className="font-sans text-muted text-xs tracking-widest uppercase mb-3">Ready to Begin?</p>
             <h2 className="font-display font-semibold text-3xl text-white mb-4">Let&#39;s Plan Your Perfect Day</h2>
             <p className="font-sans text-white/60 max-w-md mx-auto mb-8 text-sm leading-relaxed">
               We recommend booking 3–4 months in advance of your wedding date to allow time for a trial and any follow-up sessions.

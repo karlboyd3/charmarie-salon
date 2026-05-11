@@ -36,7 +36,7 @@ export default function Contact() {
     <section id="contact" className="bg-champagne-wash py-24 lg:py-32 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="font-sans text-gold text-xs tracking-[0.2em] uppercase mb-4">
+          <p className="font-sans text-muted text-xs tracking-[0.2em] uppercase mb-4">
             Find Us
           </p>
           <h2 className="font-display font-semibold text-4xl sm:text-5xl text-espresso">
@@ -48,7 +48,7 @@ export default function Contact() {
           {/* Left: Info */}
           <div className="space-y-8">
             <div className="flex gap-4">
-              <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+              <MapPin className="w-5 h-5 text-muted flex-shrink-0 mt-1" />
               <div>
                 <p className="font-sans font-medium text-espresso mb-1">Location</p>
                 <p className="font-sans text-muted text-sm leading-relaxed">
@@ -59,7 +59,7 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-4">
-              <Phone className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+              <Phone className="w-5 h-5 text-muted flex-shrink-0 mt-1" />
               <div>
                 <p className="font-sans font-medium text-espresso mb-1">Phone</p>
                 <a
@@ -72,7 +72,7 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-4">
-              <Mail className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+              <Mail className="w-5 h-5 text-muted flex-shrink-0 mt-1" />
               <div>
                 <p className="font-sans font-medium text-espresso mb-1">Email</p>
                 <a
@@ -85,7 +85,7 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-4">
-              <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+              <Clock className="w-5 h-5 text-muted flex-shrink-0 mt-1" />
               <div>
                 <p className="font-sans font-medium text-espresso mb-3">Hours</p>
                 <div className="space-y-1.5">
@@ -114,10 +114,10 @@ export default function Contact() {
           {/* Right: Contact Form */}
           <div>
             {state.status === "success" ? (
-              <div className="h-full flex items-center justify-center rounded-2xl border border-gold/30 p-12 text-center">
+              <div className="h-full flex items-center justify-center rounded-2xl border border-muted/30 p-12 text-center">
                 <div>
                   <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>

@@ -59,7 +59,7 @@ export default function WhyChoose() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="font-sans text-gold text-xs tracking-[0.2em] uppercase mb-4">
+          <p className="font-sans text-muted text-xs tracking-[0.2em] uppercase mb-4">
             Why CharMarie
           </p>
           <h2 className="font-display font-semibold text-4xl sm:text-5xl text-espresso">
@@ -76,7 +76,7 @@ export default function WhyChoose() {
               key={pillar.title}
               className="flex gap-5 p-8 rounded-2xl bg-cream border border-espresso/8 hover:border-blush hover:shadow-sm transition-all duration-300"
             >
-              <div className="flex-shrink-0 mt-1 text-gold">
+              <div className="flex-shrink-0 mt-1 text-muted">
                 <pillar.Icon />
               </div>
               <div>

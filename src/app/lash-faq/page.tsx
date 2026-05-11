@@ -56,7 +56,7 @@ export default function LashFaqPage() {
             <h2 className="font-display font-semibold text-3xl text-espresso mb-8">Classic vs. Hybrid vs. Volume</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {lashTypes.map((type) => (
-                <div key={type.name} className="bg-white rounded-2xl p-6 border border-espresso/8 hover:border-gold/30 transition-colors">
+                <div key={type.name} className="bg-white rounded-2xl p-6 border border-espresso/8 hover:border-muted/30 transition-colors">
                   <h3 className="font-display font-semibold text-xl text-espresso mb-3">{type.name}</h3>
                   <p className="font-sans text-muted text-sm leading-relaxed">{type.description}</p>
                 </div>
@@ -68,7 +68,7 @@ export default function LashFaqPage() {
           </div>
 
           {/* Pricing reminder */}
-          <div className="bg-gold/10 border border-gold/30 rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="bg-gold/10 border border-muted/30 rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
               <p className="font-sans font-medium text-espresso">Ready to book your lashes?</p>
               <p className="font-sans text-muted text-sm">View full pricing on our Services page.</p>
@@ -91,7 +91,7 @@ export default function LashFaqPage() {
                 <details key={q} className="bg-white rounded-2xl border border-espresso/8 group">
                   <summary className="px-8 py-5 cursor-pointer font-sans font-medium text-espresso list-none flex justify-between items-center gap-4">
                     {q}
-                    <svg className="w-4 h-4 text-gold flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
@@ -109,7 +109,7 @@ export default function LashFaqPage() {
             <div className="bg-white rounded-2xl p-8 border border-espresso/8 space-y-3">
               {aftercare.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="font-sans text-gold font-medium text-sm flex-shrink-0">{i + 1}.</span>
+                  <span className="font-sans text-muted font-medium text-sm flex-shrink-0">{i + 1}.</span>
                   <p className="font-sans text-muted text-sm leading-relaxed">{item}</p>
                 </div>
               ))}

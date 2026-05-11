@@ -51,10 +51,10 @@ export default function GalleryPage() {
           </div>
 
           {/* Photo placeholder note */}
-          <div className="bg-gold/10 border border-gold/30 rounded-2xl px-6 py-4 mb-10 text-center">
+          <div className="bg-gold/10 border border-muted/30 rounded-2xl px-6 py-4 mb-10 text-center">
             <p className="font-sans text-espresso text-sm">
               Photos coming soon — in the meantime, follow us on Instagram{" "}
-              <a href="https://www.instagram.com/charmariesalon" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">@charmariesalon</a>
+              <a href="https://www.instagram.com/charmariesalon" target="_blank" rel="noopener noreferrer" className="text-muted hover:underline">@charmariesalon</a>
               {" "}to see our latest work.
             </p>
           </div>
@@ -77,7 +77,7 @@ export default function GalleryPage() {
 
           {/* Products */}
           <div className="mt-16 text-center">
-            <p className="font-sans text-gold text-xs tracking-widest uppercase mb-4">Products We Love</p>
+            <p className="font-sans text-muted text-xs tracking-widest uppercase mb-4">Products We Love</p>
             <div className="flex flex-wrap justify-center gap-3 text-muted font-sans text-sm">
               {["Wella", "Pulp Riot", "K18", "Aveda", "Oribe"].map((b) => (
                 <span key={b} className="border border-espresso/15 rounded-full px-4 py-1.5">{b}</span>

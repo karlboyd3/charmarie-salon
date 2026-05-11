@@ -60,8 +60,8 @@ export default function PermanentCosmeticsPage() {
       <main className="bg-cream py-16 px-4">
         <div className="max-w-4xl mx-auto space-y-16">
           {/* Intro */}
-          <div className="bg-white rounded-2xl p-10 border border-gold/30">
-            <p className="font-sans text-gold text-xs tracking-widest uppercase mb-4">What We Offer</p>
+          <div className="bg-white rounded-2xl p-10 border border-muted/30">
+            <p className="font-sans text-muted text-xs tracking-widest uppercase mb-4">What We Offer</p>
             <h2 className="font-display font-semibold text-3xl text-espresso mb-4">Natural-Looking Brows, Redefined.</h2>
             <p className="font-sans text-muted leading-relaxed mb-4">
               Microblading at CharMarie is a multiple-step process. New clients receive one complimentary Enhancement Session scheduled 6–12 weeks after the initial procedure to perfect shape, color, and density.
@@ -95,14 +95,14 @@ export default function PermanentCosmeticsPage() {
             <h2 className="font-display font-semibold text-3xl text-espresso mb-4">Who Should Contact Us First</h2>
             <p className="font-sans text-muted text-sm mb-6">
               If you have (or have had) any of the following conditions, please email us at{" "}
-              <a href="mailto:charmariesalon@gmail.com" className="text-gold hover:underline">charmariesalon@gmail.com</a>{" "}
+              <a href="mailto:charmariesalon@gmail.com" className="text-muted hover:underline">charmariesalon@gmail.com</a>{" "}
               before scheduling to confirm you are a candidate.
             </p>
             <div className="bg-white rounded-2xl p-8 border border-espresso/8">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {contraindications.map((item) => (
                   <div key={item} className="flex items-start gap-2">
-                    <span className="text-gold mt-0.5">·</span>
+                    <span className="text-muted mt-0.5">·</span>
                     <span className="font-sans text-muted text-sm">{item}</span>
                   </div>
                 ))}
@@ -117,7 +117,7 @@ export default function PermanentCosmeticsPage() {
             <div className="bg-white rounded-2xl p-8 border border-espresso/8 space-y-3">
               {preCare.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="font-sans text-gold font-medium text-sm flex-shrink-0">{i + 1}.</span>
+                  <span className="font-sans text-muted font-medium text-sm flex-shrink-0">{i + 1}.</span>
                   <p className="font-sans text-muted text-sm leading-relaxed">{item}</p>
                 </div>
               ))}
@@ -130,7 +130,7 @@ export default function PermanentCosmeticsPage() {
             <div className="bg-white rounded-2xl p-8 border border-espresso/8 space-y-3">
               {postCare.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="font-sans text-gold font-medium text-sm flex-shrink-0">{i + 1}.</span>
+                  <span className="font-sans text-muted font-medium text-sm flex-shrink-0">{i + 1}.</span>
                   <p className="font-sans text-muted text-sm leading-relaxed">{item}</p>
                 </div>
               ))}
@@ -151,7 +151,7 @@ export default function PermanentCosmeticsPage() {
                 <details key={q} className="bg-white rounded-2xl border border-espresso/8 group">
                   <summary className="px-8 py-5 cursor-pointer font-sans font-medium text-espresso list-none flex justify-between items-center gap-4">
                     {q}
-                    <svg className="w-4 h-4 text-gold flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
@@ -170,7 +170,7 @@ export default function PermanentCosmeticsPage() {
             </a>
             <p className="font-sans text-muted text-xs mt-4">
               Questions? Email us at{" "}
-              <a href="mailto:charmariesalon@gmail.com" className="text-gold hover:underline">charmariesalon@gmail.com</a>
+              <a href="mailto:charmariesalon@gmail.com" className="text-muted hover:underline">charmariesalon@gmail.com</a>
             </p>
           </div>
         </div>

@@ -49,7 +49,7 @@ export default function Careers() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 max-w-2xl mx-auto">
-          <p className="font-sans text-gold text-xs tracking-[0.2em] uppercase mb-4">
+          <p className="font-sans text-muted text-xs tracking-[0.2em] uppercase mb-4">
             Join the Team
           </p>
           <h2 className="font-display font-semibold text-4xl sm:text-5xl text-espresso mb-6">
@@ -68,9 +68,9 @@ export default function Careers() {
           {positions.map((pos) => (
             <div
               key={pos.title}
-              className="bg-white rounded-2xl p-8 border border-espresso/8 hover:border-gold/30 hover:shadow-md transition-all duration-300"
+              className="bg-white rounded-2xl p-8 border border-espresso/8 hover:border-muted/30 hover:shadow-md transition-all duration-300"
             >
-              <div className="text-gold mb-5">
+              <div className="text-muted mb-5">
                 <pos.Icon />
               </div>
               <h3 className="font-display font-semibold text-xl text-espresso mb-3">

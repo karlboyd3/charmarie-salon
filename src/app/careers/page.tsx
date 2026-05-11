@@ -99,14 +99,14 @@ export default function CareersPage() {
                   desc: "Hands-on learning alongside Charmaine during a full work day behind the chair. Investment of $225. See the program details below.",
                 },
               ].map((pos) => (
-                <div key={pos.title} className="bg-white rounded-2xl p-7 border border-espresso/8 hover:border-gold/30 hover:shadow-sm transition-all">
-                  <div className="text-gold mb-4"><pos.Icon /></div>
+                <div key={pos.title} className="bg-white rounded-2xl p-7 border border-espresso/8 hover:border-muted/30 hover:shadow-sm transition-all">
+                  <div className="text-muted mb-4"><pos.Icon /></div>
                   <h3 className="font-display font-semibold text-xl text-espresso mb-2">{pos.title}</h3>
                   <p className="font-sans text-muted text-sm leading-relaxed">{pos.desc}</p>
                 </div>
               ))}
             </div>
-            <div className="bg-gold/10 border border-gold/30 rounded-xl p-5">
+            <div className="bg-gold/10 border border-muted/30 rounded-xl p-5">
               <p className="font-sans text-espresso text-sm">
                 <strong>Note:</strong> We are currently fully staffed, but we maintain applications and resumes in the event of an opening. We encourage you to apply!
               </p>
@@ -119,7 +119,7 @@ export default function CareersPage() {
               <Image src="/shadowing.avif" alt="Shadowing with Charmaine" fill className="object-cover object-top opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/40 to-transparent" />
               <div className="absolute bottom-0 left-0 p-8">
-                <p className="font-sans text-gold text-xs tracking-widest uppercase mb-2">Featured Program</p>
+                <p className="font-sans text-muted text-xs tracking-widest uppercase mb-2">Featured Program</p>
                 <h2 className="font-display font-semibold text-3xl text-white">Shadowing with Charmaine</h2>
                 <p className="font-sans text-white/60 text-sm mt-1">Investment: $225 · Lunch provided · 7-hour block</p>
               </div>
@@ -127,21 +127,21 @@ export default function CareersPage() {
             <div className="p-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
-                <p className="font-sans text-gold text-xs tracking-widest uppercase mb-3">What You&#39;ll Experience</p>
+                <p className="font-sans text-muted text-xs tracking-widest uppercase mb-3">What You&#39;ll Experience</p>
                 <ul className="space-y-2">
                   {shadowingBenefits.map((b) => (
                     <li key={b} className="flex items-start gap-2 font-sans text-white/70 text-sm">
-                      <span className="text-gold mt-0.5">·</span>{b}
+                      <span className="text-muted mt-0.5">·</span>{b}
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <p className="font-sans text-gold text-xs tracking-widest uppercase mb-3">You&#39;ll Benefit If You&#39;re...</p>
+                <p className="font-sans text-muted text-xs tracking-widest uppercase mb-3">You&#39;ll Benefit If You&#39;re...</p>
                 <ul className="space-y-2">
                   {shadowingFor.map((b) => (
                     <li key={b} className="flex items-start gap-2 font-sans text-white/70 text-sm">
-                      <span className="text-gold mt-0.5">·</span>{b}
+                      <span className="text-muted mt-0.5">·</span>{b}
                     </li>
                   ))}
                 </ul>
@@ -151,7 +151,7 @@ export default function CareersPage() {
             <div className="mt-8 pt-8 border-t border-white/10">
               <p className="font-sans text-white/60 text-sm">
                 To apply for shadowing, email{" "}
-                <a href="mailto:charmariesalon@gmail.com?subject=Shadowing" className="text-gold hover:underline">charmariesalon@gmail.com</a>
+                <a href="mailto:charmariesalon@gmail.com?subject=Shadowing" className="text-muted hover:underline">charmariesalon@gmail.com</a>
                 {" "}with <strong className="text-white">Shadowing</strong>{" "}in the subject line. Introduce yourself and include the specialties you&#39;re most interested in learning.
               </p>
             </div>
@@ -160,7 +160,7 @@ export default function CareersPage() {
 
           {/* About Charmaine */}
           <div className="bg-white rounded-2xl p-10 border border-espresso/8">
-            <p className="font-sans text-gold text-xs tracking-widest uppercase mb-3">About Your Mentor</p>
+            <p className="font-sans text-muted text-xs tracking-widest uppercase mb-3">About Your Mentor</p>
             <h2 className="font-display font-semibold text-3xl text-espresso mb-4">About Charmaine</h2>
             <p className="font-sans text-muted leading-relaxed">
               Charmaine worked in salons for over 8 years as a stylist and has owned an employee-based salon since 2014. This gives her a unique perspective on ownership, being both employee and client focused. With advanced education in color, cutting, leadership, permanent makeup, and a Bachelor&#39;s degree from Radford University in Accounting, she offers a wide range of skills to coach both service providers and salon owners.
@@ -171,9 +171,9 @@ export default function CareersPage() {
           <div>
             <h2 className="font-display font-semibold text-3xl text-espresso mb-8">Submit Your Application</h2>
             {submitted ? (
-              <div className="bg-white rounded-2xl border border-gold/30 p-12 text-center">
+              <div className="bg-white rounded-2xl border border-muted/30 p-12 text-center">
                 <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-6 h-6 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>

@@ -175,7 +175,7 @@ export default function TeamPage() {
                 </div>
                 <div className="pt-14 px-6 pb-6">
                   <h3 className="font-display font-semibold text-xl text-espresso">{member.name}</h3>
-                  <p className="font-sans text-gold text-xs tracking-wider mb-1">{member.title}</p>
+                  <p className="font-sans text-muted text-xs tracking-wider mb-1">{member.title}</p>
                   <a href={`https://instagram.com/${member.instagram.replace("@", "")}`} target="_blank" rel="noopener noreferrer" className="font-sans text-muted text-xs hover:text-gold transition-colors">
                     {member.instagram}
                   </a>
@@ -213,7 +213,7 @@ export default function TeamPage() {
 
           {/* Apprentices */}
           <div className="bg-espresso rounded-2xl p-8 text-center mb-12">
-            <p className="font-sans text-gold text-xs tracking-widest uppercase mb-3">Growing the Next Generation</p>
+            <p className="font-sans text-muted text-xs tracking-widest uppercase mb-3">Growing the Next Generation</p>
             <h2 className="font-display font-semibold text-2xl text-white mb-4">Our Apprentices</h2>
             <div className="flex flex-wrap justify-center gap-3">
               {apprentices.map((name) => (

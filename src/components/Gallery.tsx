@@ -32,7 +32,7 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="font-sans text-gold text-xs tracking-[0.2em] uppercase mb-4">
+          <p className="font-sans text-muted text-xs tracking-[0.2em] uppercase mb-4">
             Our Work
           </p>
           <h2 className="font-display font-semibold text-4xl sm:text-5xl text-espresso">

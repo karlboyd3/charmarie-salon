@@ -12,7 +12,7 @@ export default function Team() {
     <section id="team" className="bg-champagne-wash py-24 lg:py-32 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6">
-          <p className="font-sans text-gold text-xs tracking-[0.2em] uppercase mb-4">Our Team</p>
+          <p className="font-sans text-muted text-xs tracking-[0.2em] uppercase mb-4">Our Team</p>
           <h2 className="font-display font-semibold text-4xl sm:text-5xl text-espresso mb-4">
             Meet the Artists Behind the Magic.
           </h2>
