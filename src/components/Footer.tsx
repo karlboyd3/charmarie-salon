@@ -1,0 +1,129 @@
+import Link from "next/link";
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "#services" },
+  { label: "Bridal", href: "#bridal" },
+  { label: "Team", href: "#team" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Careers", href: "#careers" },
+  { label: "Contact", href: "#contact" },
+];
+
+export default function Footer() {
+  return (
+    <footer style={{ backgroundColor: "#2C2523" }} className="px-4 py-16">
+      <div className="max-w-7xl mx-auto">
+        {/* Top: three columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-12">
+          {/* Brand */}
+          <div>
+            <p className="font-display font-semibold text-2xl text-cream mb-3">
+              CharMarie Salon
+            </p>
+            <p className="font-sans text-sm text-cream/50 leading-relaxed">
+              Blacksburg&#39;s Premier Full-Service Salon
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <p className="font-sans text-xs text-gold tracking-widest uppercase mb-5">
+              Quick Links
+            </p>
+            <ul className="space-y-2.5">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="font-sans text-sm text-cream/60 hover:text-cream transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Social + Book */}
+          <div>
+            <p className="font-sans text-xs text-gold tracking-widest uppercase mb-5">
+              Connect
+            </p>
+            <div className="flex gap-4 mb-8">
+              <a
+                href="https://www.instagram.com/CharMarieSalon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-cream/60 hover:text-gold transition-colors"
+              >
+                <InstagramIcon className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.facebook.com/CharMarieSalon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-cream/60 hover:text-gold transition-colors"
+              >
+                <FacebookIcon className="w-5 h-5" />
+              </a>
+            </div>
+            <a
+              href="https://app.glossgenius.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-sans text-sm font-medium bg-gold text-espresso px-6 py-3 rounded-full hover:bg-gold/90 transition-colors"
+            >
+              Book Now
+            </a>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/10 pt-8">
+          <p className="font-sans text-xs text-cream/30 text-center">
+            © 2025 CharMarie Salon. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
