@@ -1,7 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone, Mail } from "lucide-react";
+
+const hours = [
+  { day: "Monday", time: "By Appointment Only" },
+  { day: "Tuesday", time: "9:00 am – 7:00 pm" },
+  { day: "Wednesday", time: "9:00 am – 6:30 pm" },
+  { day: "Thursday", time: "9:00 am – 7:00 pm" },
+  { day: "Friday", time: "9:00 am – 6:30 pm" },
+  { day: "Saturday", time: "9:00 am – 3:00 pm" },
+  { day: "Sunday", time: "Closed" },
+];
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -15,14 +25,12 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Replace with real form handler when ready
     setSubmitted(true);
   };
 
   return (
     <section id="contact" className="bg-white py-24 lg:py-32 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <p className="font-sans text-gold text-xs tracking-[0.2em] uppercase mb-4">
             Find Us
@@ -38,27 +46,10 @@ export default function Contact() {
             <div className="flex gap-4">
               <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
               <div>
-                <p className="font-sans font-medium text-espresso mb-1">
-                  Location
-                </p>
+                <p className="font-sans font-medium text-espresso mb-1">Location</p>
                 <p className="font-sans text-muted text-sm leading-relaxed">
-                  Blacksburg, Virginia
-                  <br />
-                  New River Valley
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
-              <div>
-                <p className="font-sans font-medium text-espresso mb-1">
-                  Hours
-                </p>
-                <p className="font-sans text-muted text-sm leading-relaxed">
-                  Monday – Saturday: 9am – 7pm
-                  <br />
-                  Sunday: Closed
+                  120 Professional Park Dr, Suite 7<br />
+                  Blacksburg, VA 24060
                 </p>
               </div>
             </div>
@@ -66,17 +57,45 @@ export default function Contact() {
             <div className="flex gap-4">
               <Phone className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
               <div>
-                <p className="font-sans font-medium text-espresso mb-1">
-                  Phone
-                </p>
-                <p className="font-sans text-muted text-sm">
-                  (540) 000-0000
-                </p>
+                <p className="font-sans font-medium text-espresso mb-1">Phone</p>
+                <a
+                  href="tel:5402513350"
+                  className="font-sans text-muted text-sm hover:text-gold transition-colors"
+                >
+                  (540) 251-3350
+                </a>
               </div>
             </div>
 
-            {/* Booking CTA */}
-            <div className="pt-4">
+            <div className="flex gap-4">
+              <Mail className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+              <div>
+                <p className="font-sans font-medium text-espresso mb-1">Email</p>
+                <a
+                  href="mailto:charmariesalon@gmail.com"
+                  className="font-sans text-muted text-sm hover:text-gold transition-colors"
+                >
+                  charmariesalon@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+              <div>
+                <p className="font-sans font-medium text-espresso mb-3">Hours</p>
+                <div className="space-y-1.5">
+                  {hours.map(({ day, time }) => (
+                    <div key={day} className="flex justify-between gap-8">
+                      <span className="font-sans text-espresso text-sm">{day}</span>
+                      <span className="font-sans text-muted text-sm text-right">{time}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-2">
               <a
                 href="https://app.glossgenius.com"
                 target="_blank"
@@ -93,7 +112,11 @@ export default function Contact() {
             {submitted ? (
               <div className="h-full flex items-center justify-center rounded-2xl border border-gold/30 p-12 text-center">
                 <div>
-                  <p className="text-3xl mb-4">✨</p>
+                  <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                   <h3 className="font-display font-semibold text-2xl text-espresso mb-2">
                     Message Received!
                   </h3>
@@ -118,7 +141,6 @@ export default function Contact() {
                     className="w-full font-sans text-sm text-espresso bg-cream border border-espresso/15 rounded-xl px-4 py-3.5 focus:outline-none focus:border-gold transition-colors placeholder:text-muted/50"
                   />
                 </div>
-
                 <div>
                   <label className="block font-sans text-xs text-espresso/60 uppercase tracking-wider mb-2">
                     Email
@@ -133,7 +155,6 @@ export default function Contact() {
                     className="w-full font-sans text-sm text-espresso bg-cream border border-espresso/15 rounded-xl px-4 py-3.5 focus:outline-none focus:border-gold transition-colors placeholder:text-muted/50"
                   />
                 </div>
-
                 <div>
                   <label className="block font-sans text-xs text-espresso/60 uppercase tracking-wider mb-2">
                     Message
@@ -148,7 +169,6 @@ export default function Contact() {
                     className="w-full font-sans text-sm text-espresso bg-cream border border-espresso/15 rounded-xl px-4 py-3.5 focus:outline-none focus:border-gold transition-colors resize-none placeholder:text-muted/50"
                   />
                 </div>
-
                 <button
                   type="submit"
                   className="w-full font-sans font-medium bg-espresso text-cream py-4 rounded-full hover:bg-espresso/90 transition-all hover:shadow-lg hover:-translate-y-0.5"
