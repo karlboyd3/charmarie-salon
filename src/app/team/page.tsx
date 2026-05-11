@@ -166,11 +166,11 @@ const support = [
 ];
 
 const apprentices = [
-  { name: "Mary Beth", photo: null },
+  { name: "Mary Beth", photo: "/team/maryb.avif" },
 ];
 
 const assistants = [
-  { name: "Hannah", photo: null },
+  { name: "Hannah", photo: "/team/hannah.avif" },
   { name: "Taylor", photo: "/team/taylor.avif" },
   { name: "Paige", photo: "/team/paige.avif" },
   { name: "Jessica", photo: "/team/jessica.avif" },
