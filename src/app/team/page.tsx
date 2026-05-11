@@ -165,6 +165,16 @@ const support = [
   },
 ];
 
+const apprentices = [
+  { name: "Mary Beth", photo: null },
+];
+
+const assistants = [
+  { name: "Hannah", photo: null },
+  { name: "Taylor", photo: "/team/taylor.avif" },
+  { name: "Paige", photo: "/team/paige.avif" },
+  { name: "Jessica", photo: "/team/jessica.avif" },
+];
 
 export default function TeamPage() {
   return (
@@ -239,6 +249,43 @@ export default function TeamPage() {
                   <p className="font-sans text-muted text-xs leading-relaxed italic">
                     I enjoy: {s.enjoys}
                   </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Apprentice + Assistants */}
+          <div className="bg-espresso rounded-2xl p-10 mb-12">
+            <h2 className="font-display font-semibold text-2xl text-white mb-8 text-center">Apprentice</h2>
+            <div className="flex justify-center mb-10">
+              {apprentices.map((a) => (
+                <div key={a.name} className="text-center">
+                  <div className="w-36 h-36 rounded-full mx-auto mb-3 overflow-hidden">
+                    {a.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={a.photo} alt={a.name} className="w-full h-full object-cover object-top" />
+                    ) : (
+                      <div className="w-full h-full bg-white/10" />
+                    )}
+                  </div>
+                  <span className="font-sans text-sm text-cream/80">{a.name}</span>
+                </div>
+              ))}
+            </div>
+
+            <h2 className="font-display font-semibold text-2xl text-white mb-8 text-center">Assistants</h2>
+            <div className="flex flex-wrap justify-center gap-10">
+              {assistants.map((a) => (
+                <div key={a.name} className="text-center">
+                  <div className="w-36 h-36 rounded-full mx-auto mb-3 overflow-hidden">
+                    {a.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={a.photo} alt={a.name} className="w-full h-full object-cover object-top" />
+                    ) : (
+                      <div className="w-full h-full bg-white/10" />
+                    )}
+                  </div>
+                  <span className="font-sans text-sm text-cream/80">{a.name}</span>
                 </div>
               ))}
             </div>
