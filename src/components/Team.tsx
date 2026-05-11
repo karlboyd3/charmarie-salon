@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const featured = [
-  { name: "Charmaine", title: "Owner / Stylist / Makeup Artist", gradient: "from-[#E8D8C3] to-[#d4c4ad]" },
-  { name: "Holly", title: "Color Specialist", gradient: "from-[#D8A7A7] to-[#E8D8C3]" },
-  { name: "Martha B.", title: "Stylist / Facials / Waxing", gradient: "from-[#A78B7A] to-[#E8D8C3]" },
-  { name: "Rianna", title: "Color & Smoothing Specialist", gradient: "from-[#d4c4ad] to-[#D8A7A7]" },
+  { name: "Charmaine", title: "Owner / Stylist / Makeup Artist", photo: "/team/charmaine.avif" },
+  { name: "Holly", title: "Color Specialist", photo: "/team/holly.avif" },
+  { name: "Martha B.", title: "Stylist / Facials / Waxing", photo: "/team/martha.avif" },
+  { name: "Rianna", title: "Color & Smoothing Specialist", photo: "/team/rianna.avif" },
 ];
 
 export default function Team() {
@@ -17,14 +17,21 @@ export default function Team() {
             Meet the Artists Behind the Magic.
           </h2>
           <p className="font-sans text-muted max-w-xl mx-auto leading-relaxed">
-            Our talented team of 14 stylists, colorists, and beauty professionals are passionate, educated, and genuinely love what they do.
+            Our talented team of stylists, colorists, and beauty professionals are passionate, educated, and genuinely love what they do.
           </p>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
           {featured.map((member) => (
             <div key={member.name} className="text-center group">
-              <div className={`w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-5 bg-gradient-to-br ${member.gradient} shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all duration-300`} />
+              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-5 overflow-hidden shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all duration-300 bg-champagne-wash">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <h3 className="font-display font-semibold text-xl text-espresso mb-1">{member.name}</h3>
               <p className="font-sans text-muted text-sm">{member.title}</p>
             </div>

@@ -1,3 +1,7 @@
+import Link from "next/link";
+import { getInstagramPosts } from "@/lib/instagram";
+import GalleryGrid from "./GalleryGrid";
+
 function InstagramIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -18,15 +22,21 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 const placeholders = [
-  { gradient: "from-[#E8D8C3] to-[#d4c4ad]" },
-  { gradient: "from-[#D8A7A7] to-[#c49898]" },
-  { gradient: "from-[#A78B7A] to-[#8a7066]" },
-  { gradient: "from-[#d4c4ad] to-[#D8A7A7]" },
-  { gradient: "from-[#c49898] to-[#E8D8C3]" },
-  { gradient: "from-[#2B211D] to-[#A78B7A]" },
+  { gradient: "from-[#E8D8C3] to-[#d4c4ad]", label: "Balayage" },
+  { gradient: "from-[#D8A7A7] to-[#c49898]", label: "Color" },
+  { gradient: "from-[#A78B7A] to-[#8a7066]", label: "Cut & Style" },
+  { gradient: "from-[#d4c4ad] to-[#D8A7A7]", label: "Highlights" },
+  { gradient: "from-[#c49898] to-[#E8D8C3]", label: "Bridal Hair" },
+  { gradient: "from-[#2B211D] to-[#A78B7A]", label: "Color Correction" },
+  { gradient: "from-[#E8D8C3] to-[#D8A7A7]", label: "Foiliyage" },
+  { gradient: "from-[#D8A7A7] to-[#A78B7A]", label: "Blonde Specialist" },
+  { gradient: "from-[#d4c4ad] to-[#2B211D]", label: "Extensions" },
 ];
 
-export default function Gallery() {
+export default async function Gallery() {
+  const posts = await getInstagramPosts(9);
+  const hasPosts = posts.length > 0;
+
   return (
     <section id="gallery" className="bg-cream py-24 lg:py-32 px-4">
       <div className="max-w-7xl mx-auto">
@@ -40,43 +50,44 @@ export default function Gallery() {
           </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {placeholders.map((item, i) => (
-            <div
-              key={i}
-              className={`aspect-square rounded-xl bg-gradient-to-br ${item.gradient} overflow-hidden relative group cursor-pointer`}
-            >
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-espresso/0 group-hover:bg-espresso/30 transition-all duration-300 flex items-center justify-center">
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-sans text-white text-sm tracking-wider">
-                  View →
-                </span>
+        {/* Grid — real posts or placeholders */}
+        {hasPosts ? (
+          <GalleryGrid posts={posts} />
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {placeholders.map((item, i) => (
+              <div
+                key={i}
+                className={`aspect-square rounded-xl bg-gradient-to-br ${item.gradient} overflow-hidden relative group`}
+              >
+                <div className="absolute inset-0 bg-espresso/0 group-hover:bg-espresso/30 transition-all duration-300 flex items-end p-5">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-sans text-white text-sm">
+                    {item.label}
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* Footer CTAs */}
         <div className="text-center mt-12 space-y-4">
           <a
-            href="https://www.instagram.com/CharMarieSalon"
+            href="https://www.instagram.com/charmariesalon"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-sans text-espresso/70 hover:text-gold transition-colors text-sm"
+            className="inline-flex items-center gap-2 font-sans text-espresso/70 hover:text-muted transition-colors text-sm"
           >
             <InstagramIcon className="w-4 h-4" />
-            Follow us on Instagram @CharMarieSalon
+            Follow us on Instagram @charmariesalon
           </a>
           <div>
-            <a
-              href="https://www.instagram.com/CharMarieSalon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block font-sans text-sm font-medium border border-espresso/20 text-espresso px-7 py-3 rounded-full hover:border-gold hover:text-gold transition-all"
+            <Link
+              href="/gallery"
+              className="inline-block font-sans text-sm font-medium border border-espresso/20 text-espresso px-7 py-3 rounded-full hover:border-gold hover:text-muted transition-all"
             >
               View Full Gallery →
-            </a>
+            </Link>
           </div>
         </div>
       </div>

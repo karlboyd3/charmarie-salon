@@ -1,5 +1,7 @@
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
+import GalleryGrid from "@/components/GalleryGrid";
+import { getInstagramPosts } from "@/lib/instagram";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -26,7 +28,10 @@ const placeholders = [
   { gradient: "from-[#2B211D] to-[#E8D8C3]", label: "Updo" },
 ];
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const posts = await getInstagramPosts(24);
+  const hasPosts = posts.length > 0;
+
   return (
     <>
       <PageHeader
@@ -43,37 +48,41 @@ export default function GalleryPage() {
               href="https://www.instagram.com/charmariesalon"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-sans text-espresso border border-espresso/20 px-6 py-3 rounded-full hover:border-gold hover:text-gold transition-all text-sm"
+              className="inline-flex items-center gap-2 font-sans text-espresso border border-espresso/20 px-6 py-3 rounded-full hover:border-gold hover:text-muted transition-all text-sm"
             >
               <InstagramIcon className="w-4 h-4" />
               Follow @charmariesalon for daily work
             </a>
           </div>
 
-          {/* Photo placeholder note */}
-          <div className="bg-gold/10 border border-muted/30 rounded-2xl px-6 py-4 mb-10 text-center">
-            <p className="font-sans text-espresso text-sm">
-              Photos coming soon — in the meantime, follow us on Instagram{" "}
-              <a href="https://www.instagram.com/charmariesalon" target="_blank" rel="noopener noreferrer" className="text-muted hover:underline">@charmariesalon</a>
-              {" "}to see our latest work.
-            </p>
-          </div>
-
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {placeholders.map((item, i) => (
-              <div
-                key={i}
-                className={`aspect-square rounded-xl bg-gradient-to-br ${item.gradient} overflow-hidden relative group`}
-              >
-                <div className="absolute inset-0 bg-espresso/0 group-hover:bg-espresso/40 transition-all duration-300 flex items-end p-5">
-                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-sans text-white text-sm">
-                    {item.label}
-                  </span>
-                </div>
+          {hasPosts ? (
+            <GalleryGrid posts={posts} />
+          ) : (
+            <>
+              <div className="bg-gold/10 border border-muted/30 rounded-2xl px-6 py-4 mb-10 text-center">
+                <p className="font-sans text-espresso text-sm">
+                  Photos coming soon — in the meantime, follow us on Instagram{" "}
+                  <a href="https://www.instagram.com/charmariesalon" target="_blank" rel="noopener noreferrer" className="text-muted hover:underline">@charmariesalon</a>
+                  {" "}to see our latest work.
+                </p>
               </div>
-            ))}
-          </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {placeholders.map((item, i) => (
+                  <div
+                    key={i}
+                    className={`aspect-square rounded-xl bg-gradient-to-br ${item.gradient} overflow-hidden relative group`}
+                  >
+                    <div className="absolute inset-0 bg-espresso/0 group-hover:bg-espresso/40 transition-all duration-300 flex items-end p-5">
+                      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-sans text-white text-sm">
+                        {item.label}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
 
           {/* Products */}
           <div className="mt-16 text-center">
