@@ -145,13 +145,31 @@ const stylists = [
 ];
 
 const support = [
-  { name: "Sarah", title: "Salon Management", photo: null },
-  { name: "Laura", title: "Salon Coordinator", photo: "/team/laura.avif" },
-  { name: "Skyla", title: "Salon Coordinator", photo: "/team/skyla.avif" },
+  {
+    name: "Sarah",
+    title: "Salon Management",
+    photo: "/team/sarah.avif",
+    enjoys: "Makeup, baking cakes, interior design, dogs and a good sense of humor!",
+  },
+  {
+    name: "Laura",
+    title: "Salon Coordinator",
+    photo: "/team/laura.avif",
+    enjoys: 'My pups, time with family, and "dad" joke humor',
+  },
+  {
+    name: "Skyla",
+    title: "Salon Coordinator",
+    photo: "/team/skyla.avif",
+    enjoys: "Time in nature, live music, creative expression through art and makeup, and trying new recipes.",
+  },
 ];
 
 const apprentices = [
   { name: "Mary Beth", photo: null },
+];
+
+const assistants = [
   { name: "Hannah", photo: null },
   { name: "Taylor", photo: "/team/taylor.avif" },
   { name: "Paige", photo: "/team/paige.avif" },
@@ -212,13 +230,13 @@ export default function TeamPage() {
             ))}
           </div>
 
-          {/* Support Staff */}
+          {/* Front of House */}
           <div className="mb-16">
             <h2 className="font-display font-semibold text-3xl text-espresso text-center mb-10">Front of House</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
               {support.map((s) => (
-                <div key={s.name} className="bg-white rounded-2xl p-6 text-center border border-espresso/8">
-                  <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden bg-champagne-wash">
+                <div key={s.name} className="bg-white rounded-2xl p-7 text-center border border-espresso/8">
+                  <div className="w-32 h-32 rounded-full mx-auto mb-5 overflow-hidden bg-champagne-wash">
                     {s.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={s.photo} alt={s.name} className="w-full h-full object-cover object-top" />
@@ -226,21 +244,44 @@ export default function TeamPage() {
                       <div className="w-full h-full bg-gradient-to-br from-[#E8D8C3] to-[#D8A7A7]" />
                     )}
                   </div>
-                  <h3 className="font-display font-semibold text-lg text-espresso">{s.name}</h3>
-                  <p className="font-sans text-muted text-sm">{s.title}</p>
+                  <h3 className="font-display font-semibold text-xl text-espresso">{s.name}</h3>
+                  <p className="font-sans text-muted text-sm mb-3">{s.title}</p>
+                  <p className="font-sans text-muted text-xs leading-relaxed italic">
+                    I enjoy: {s.enjoys}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Apprentices */}
+          {/* Apprentice + Assistants */}
           <div className="bg-espresso rounded-2xl p-8 mb-12">
             <p className="font-sans text-muted text-xs tracking-widest uppercase mb-3 text-center">Growing the Next Generation</p>
-            <h2 className="font-display font-semibold text-2xl text-white mb-8 text-center">Our Apprentices</h2>
-            <div className="flex flex-wrap justify-center gap-6">
+
+            {/* Apprentice */}
+            <h2 className="font-display font-semibold text-2xl text-white mb-6 text-center">Apprentice</h2>
+            <div className="flex justify-center mb-10">
               {apprentices.map((a) => (
                 <div key={a.name} className="text-center">
-                  <div className="w-16 h-16 rounded-full mx-auto mb-2 overflow-hidden">
+                  <div className="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
+                    {a.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={a.photo} alt={a.name} className="w-full h-full object-cover object-top" />
+                    ) : (
+                      <div className="w-full h-full bg-white/10" />
+                    )}
+                  </div>
+                  <span className="font-sans text-sm text-cream/80">{a.name}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Assistants */}
+            <h2 className="font-display font-semibold text-2xl text-white mb-6 text-center">Assistants</h2>
+            <div className="flex flex-wrap justify-center gap-8">
+              {assistants.map((a) => (
+                <div key={a.name} className="text-center">
+                  <div className="w-20 h-20 rounded-full mx-auto mb-2 overflow-hidden">
                     {a.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={a.photo} alt={a.name} className="w-full h-full object-cover object-top" />
