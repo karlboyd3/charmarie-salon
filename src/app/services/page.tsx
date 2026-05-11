@@ -185,7 +185,7 @@ export default function ServicesPage() {
               </Card>
             </div>
             <div className="mt-4">
-              <Link href="/lash-faq" className="font-sans text-sm text-gold hover:text-espresso transition-colors">
+              <Link href="/lash-faq" className="font-sans text-sm text-muted hover:text-espresso transition-colors">
                 Read our full Lash FAQ & Aftercare Guide →
               </Link>
             </div>
@@ -202,7 +202,7 @@ export default function ServicesPage() {
               <PriceRow name="Powder Brows (Session 1)" price="$450" note="Session 2 included. Scheduled 6–12 weeks after Session 1." />
             </Card>
             <div className="mt-4">
-              <Link href="/permanent-cosmetics" className="font-sans text-sm text-gold hover:text-espresso transition-colors">
+              <Link href="/permanent-cosmetics" className="font-sans text-sm text-muted hover:text-espresso transition-colors">
                 Read our full Permanent Cosmetics guide, FAQ & Pre/Post Care →
               </Link>
             </div>
