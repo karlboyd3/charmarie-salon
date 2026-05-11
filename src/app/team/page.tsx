@@ -170,19 +170,20 @@ export default function TeamPage() {
       <main className="bg-cream py-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Stylists */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-20">
             {stylists.map((member) => (
-              <div key={member.name} className="bg-white rounded-2xl overflow-hidden border border-espresso/8 hover:shadow-md hover:border-gold/20 transition-all duration-300">
-                {/* Photo header */}
-                <div className="h-56 bg-champagne-wash relative overflow-hidden">
+              <div key={member.name} className="bg-white rounded-2xl overflow-hidden border border-espresso/8 hover:shadow-md hover:border-gold/20 transition-all duration-300 flex">
+                {/* Photo */}
+                <div className="w-40 sm:w-48 flex-shrink-0 overflow-hidden bg-champagne-wash">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={member.photo}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <div className="px-6 pb-6 pt-5">
+                {/* Info */}
+                <div className="px-5 py-5 flex flex-col min-w-0">
                   <h3 className="font-display font-semibold text-xl text-espresso">{member.name}</h3>
                   <p className="font-sans text-muted text-xs tracking-wider mb-1">{member.title}</p>
                   <a
@@ -196,7 +197,7 @@ export default function TeamPage() {
                   {member.licensed && (
                     <p className="font-sans text-muted text-xs mt-1">Licensed since {member.licensed}</p>
                   )}
-                  <div className="mt-4 pt-4 border-t border-espresso/8">
+                  <div className="mt-3 pt-3 border-t border-espresso/8">
                     <p className="font-sans text-xs text-espresso/60 uppercase tracking-wider mb-1">Specialties</p>
                     <p className="font-sans text-muted text-xs leading-relaxed">{member.services}</p>
                   </div>

@@ -3,17 +3,18 @@ export default function Bridal() {
     <section id="bridal" className="bg-champagne-wash py-0 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
-          {/* Left: image placeholder */}
-          <div
-            className="relative min-h-72 lg:min-h-full"
-            style={{
-              background:
-                "linear-gradient(135deg, #D8A7A7 0%, #E8D8C3 40%, #d4c4ad 70%, #2B211D 100%)",
-            }}
-          >
-            {/* Overlaid decorative text */}
+          {/* Left: photo */}
+          <div className="relative min-h-72 lg:min-h-full overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/bridal.avif"
+              alt="Bridal hair styling at CharMarie Salon"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            {/* Subtle dark gradient at bottom for the watermark text */}
+            <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent" />
             <div className="absolute inset-0 flex items-end p-10">
-              <p className="font-display text-white/20 text-8xl font-semibold leading-none select-none">
+              <p className="font-display text-white/60 text-8xl font-semibold leading-none select-none">
                 Bridal
               </p>
             </div>
