@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
 
@@ -89,11 +90,17 @@ export default function CareersPage() {
           </div>
 
           {/* Shadowing Program */}
-          <div className="bg-espresso rounded-2xl p-10">
-            <p className="font-sans text-gold text-xs tracking-widest uppercase mb-3">Featured Program</p>
-            <h2 className="font-display font-semibold text-3xl text-white mb-2">Shadowing with Charmaine</h2>
-            <p className="font-sans text-white/60 text-sm mb-8">Investment: $225 · Lunch provided · 7-hour block</p>
-
+          <div className="bg-espresso rounded-2xl overflow-hidden">
+            <div className="relative h-64 sm:h-80 w-full">
+              <Image src="/shadowing.avif" alt="Shadowing with Charmaine" fill className="object-cover object-top opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-8">
+                <p className="font-sans text-gold text-xs tracking-widest uppercase mb-2">Featured Program</p>
+                <h2 className="font-display font-semibold text-3xl text-white">Shadowing with Charmaine</h2>
+                <p className="font-sans text-white/60 text-sm mt-1">Investment: $225 · Lunch provided · 7-hour block</p>
+              </div>
+            </div>
+            <div className="p-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
                 <p className="font-sans text-gold text-xs tracking-widest uppercase mb-3">What You&#39;ll Experience</p>
@@ -123,6 +130,7 @@ export default function CareersPage() {
                 <a href="mailto:charmariesalon@gmail.com?subject=Shadowing" className="text-gold hover:underline">charmariesalon@gmail.com</a>
                 {" "}with <strong className="text-white">Shadowing</strong> in the subject line. Introduce yourself and include the specialties you&#39;re most interested in learning.
               </p>
+            </div>
             </div>
           </div>
 

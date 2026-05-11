@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -35,7 +36,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <p className="font-display font-semibold text-2xl text-cream mb-2">CharMarie Salon</p>
+            <Image src="/logo.png" alt="CharMarie Salon" width={160} height={56} className="h-12 w-auto mb-4 brightness-0 invert" />
             <p className="font-sans text-sm text-cream/50 leading-relaxed mb-4">
               Blacksburg&#39;s Premier Full-Service Salon
             </p>
