@@ -55,7 +55,7 @@ const pillars = [
 
 export default function WhyChoose() {
   return (
-    <section className="bg-white py-24 lg:py-32 px-4">
+    <section className="bg-blush-wash py-24 lg:py-32 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -74,7 +74,7 @@ export default function WhyChoose() {
           {pillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="flex gap-5 p-8 rounded-2xl border border-espresso/8 hover:border-gold/30 hover:shadow-sm transition-all duration-300"
+              className="flex gap-5 p-8 rounded-2xl bg-cream border border-espresso/8 hover:border-blush hover:shadow-sm transition-all duration-300"
             >
               <div className="flex-shrink-0 mt-1 text-gold">
                 <pillar.Icon />

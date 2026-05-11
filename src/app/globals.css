@@ -9,6 +9,10 @@
   --color-muted: #A78B7A;
   --color-card-dark: #3a2e28;
 
+  /* Section wash backgrounds */
+  --color-blush-wash: #F5ECEA;
+  --color-champagne-wash: #F0E8D8;
+
   /* Typography */
   --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
@@ -23,4 +27,5 @@ body {
   color: #2B211D;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
 }

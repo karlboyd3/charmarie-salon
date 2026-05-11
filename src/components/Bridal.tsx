@@ -1,6 +1,6 @@
 export default function Bridal() {
   return (
-    <section id="bridal" className="bg-white py-0 overflow-hidden">
+    <section id="bridal" className="bg-champagne-wash py-0 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
           {/* Left: image placeholder */}
@@ -20,7 +20,7 @@ export default function Bridal() {
           </div>
 
           {/* Right: content */}
-          <div className="flex items-center px-8 py-16 lg:px-16 lg:py-20 bg-white">
+          <div className="flex items-center px-8 py-16 lg:px-16 lg:py-20 bg-champagne-wash">
             <div className="max-w-lg">
               <p className="font-sans text-gold text-xs tracking-[0.25em] uppercase mb-5">
                 Bridal &amp; Wedding

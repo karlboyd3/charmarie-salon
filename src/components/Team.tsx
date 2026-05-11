@@ -9,7 +9,7 @@ const featured = [
 
 export default function Team() {
   return (
-    <section id="team" className="bg-cream py-24 lg:py-32 px-4">
+    <section id="team" className="bg-champagne-wash py-24 lg:py-32 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6">
           <p className="font-sans text-gold text-xs tracking-[0.2em] uppercase mb-4">Our Team</p>

@@ -45,7 +45,7 @@ const positions = [
 
 export default function Careers() {
   return (
-    <section id="careers" className="bg-cream py-24 lg:py-32 px-4">
+    <section id="careers" className="bg-blush-wash py-24 lg:py-32 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 max-w-2xl mx-auto">
