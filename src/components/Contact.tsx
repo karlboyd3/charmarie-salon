@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
+import { sendContactEmail, type ContactFormState } from "@/app/actions";
 
 const hours = [
   { day: "Monday", time: "By Appointment Only" },
@@ -13,19 +14,22 @@ const hours = [
   { day: "Sunday", time: "Closed" },
 ];
 
+const initialState: ContactFormState = { status: "idle", message: "" };
+
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [state, formAction, pending] = useActionState(sendContactEmail, initialState);
+
+  useEffect(() => {
+    if (state.status === "success") {
+      setForm({ name: "", email: "", message: "" });
+    }
+  }, [state.status]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
   };
 
   return (
@@ -97,7 +101,7 @@ export default function Contact() {
 
             <div className="pt-2">
               <a
-                href="https://app.glossgenius.com"
+                href="https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVLqgQS0cYJaPL+EJXEsdmhwDbHDrqoEJm0qk3XsE5TT85bPeJ/ymX7NWXPgtuzug11sunBLXOM5hI0aEzf1Lll4TD90a/smNSxnjpcAyTERbEIUBubX7B4HOlIqqOuW+najoaET4Y0PN1TMT0l5ZcNfEhFoBu1BmnAhle4NFoNYypllGn0f7WDppxWH+fNDM3La5Gs21jkrSaSPvYuwjnB8rxNKWkJ3Nkrm5zRIQ8ApfG2XZ6xPrlMwPo0cVcLVgJTDBCcgANmwOw2c5QnwCvJFKdk55RSj6CQlSj8NRiW1+OQ54hvy3gHX6/Ud+YaXhbR7zXe4kKk/9S/pxAw4x9cpA7BXwjobqJ9vAJwQjcrzExCjFiWpKI2n5MCZcGVMsTiFVtn5SQka/fXVGrkq3WQVZ7Ie0uyJ9zhYvuTIEqgrn&c_type=tab"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block font-sans font-medium bg-gold text-espresso px-8 py-4 rounded-full hover:bg-gold/90 transition-all hover:shadow-md hover:-translate-y-0.5"
@@ -109,7 +113,7 @@ export default function Contact() {
 
           {/* Right: Contact Form */}
           <div>
-            {submitted ? (
+            {state.status === "success" ? (
               <div className="h-full flex items-center justify-center rounded-2xl border border-gold/30 p-12 text-center">
                 <div>
                   <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
@@ -126,7 +130,7 @@ export default function Contact() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form action={formAction} className="space-y-5">
                 <div>
                   <label className="block font-sans text-xs text-espresso/60 uppercase tracking-wider mb-2">
                     Name
@@ -169,11 +173,15 @@ export default function Contact() {
                     className="w-full font-sans text-sm text-espresso bg-cream border border-espresso/15 rounded-xl px-4 py-3.5 focus:outline-none focus:border-gold transition-colors resize-none placeholder:text-muted/50"
                   />
                 </div>
+                {state.status === "error" && (
+                  <p className="font-sans text-sm text-red-600">{state.message}</p>
+                )}
                 <button
                   type="submit"
-                  className="w-full font-sans font-medium bg-espresso text-cream py-4 rounded-full hover:bg-espresso/90 transition-all hover:shadow-lg hover:-translate-y-0.5"
+                  disabled={pending}
+                  className="w-full font-sans font-medium bg-espresso text-cream py-4 rounded-full hover:bg-espresso/90 transition-all hover:shadow-lg hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:translate-y-0 disabled:shadow-none"
                 >
-                  Send Message
+                  {pending ? "Sending…" : "Send Message"}
                 </button>
               </form>
             )}
