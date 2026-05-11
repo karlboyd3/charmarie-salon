@@ -128,7 +128,7 @@ export default function CareersPage() {
               <p className="font-sans text-white/60 text-sm">
                 To apply for shadowing, email{" "}
                 <a href="mailto:charmariesalon@gmail.com?subject=Shadowing" className="text-gold hover:underline">charmariesalon@gmail.com</a>
-                {" "}with <strong className="text-white">Shadowing</strong> in the subject line. Introduce yourself and include the specialties you&#39;re most interested in learning.
+                {" "}with <strong className="text-white">Shadowing</strong>{" "}in the subject line. Introduce yourself and include the specialties you&#39;re most interested in learning.
               </p>
             </div>
             </div>

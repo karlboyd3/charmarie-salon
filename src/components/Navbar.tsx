@@ -36,16 +36,18 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image
-              src="/logo.png"
-              alt="CharMarie Salon"
-              width={160}
-              height={56}
-              className={`h-12 w-auto transition-all duration-300 ${
-                scrolled ? "brightness-0" : "brightness-0 invert"
-              }`}
-              priority
-            />
+            <div className={`transition-all duration-300 rounded-lg px-3 py-1.5 ${
+              scrolled ? "bg-transparent" : "bg-white/95"
+            }`}>
+              <Image
+                src="/logo.png"
+                alt="CharMarie Salon"
+                width={160}
+                height={48}
+                className="h-10 w-auto"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
