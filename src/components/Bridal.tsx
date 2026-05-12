@@ -37,7 +37,7 @@ export default function Bridal() {
                 key={photo}
                 src={photo}
                 alt="Bridal hair styling at CharMarie Salon"
-                style={{ transform: "scale(0.72)" }}
+                style={{ transform: "scale(0.85)" }}
                 className={`absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-1000 ${
                   i === current ? "opacity-100" : "opacity-0"
                 }`}
