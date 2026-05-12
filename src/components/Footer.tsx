@@ -36,7 +36,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <div className="inline-block bg-white/95 rounded-lg px-3 py-1.5 mb-4">
+            <div className="mb-4">
               <Image src="/logo-v2.png" alt="CharMarie Salon" width={160} height={56} className="h-12 w-auto" />
             </div>
             <p className="font-sans text-sm text-cream/50 leading-relaxed mb-4">

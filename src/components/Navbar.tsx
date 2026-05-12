@@ -44,18 +44,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className={`transition-all duration-300 rounded-lg px-3 py-1.5 ${
-              scrolled ? "bg-transparent" : "bg-white/95"
-            }`}>
-              <Image
-                src="/logo-v2.png"
-                alt="CharMarie Salon"
-                width={160}
-                height={48}
-                className="h-10 w-auto"
-                priority
-              />
-            </div>
+            <Image
+              src="/logo-v2.png"
+              alt="CharMarie Salon"
+              width={160}
+              height={48}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
