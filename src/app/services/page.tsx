@@ -41,7 +41,7 @@ export default function ServicesPage() {
 
       {/* Sticky category nav */}
       <nav className="sticky top-0 z-40 bg-white border-b border-espresso/10 shadow-sm overflow-x-auto">
-        <div className="max-w-7xl mx-auto px-8 flex gap-7 py-4 whitespace-nowrap lg:justify-center">
+        <div className="max-w-7xl mx-auto px-8 flex gap-7 py-2 lg:py-4 whitespace-nowrap lg:justify-center">
           {[
             ["Cuts & Styling", "#cuts"],
             ["Color", "#color"],
