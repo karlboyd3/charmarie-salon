@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -25,23 +25,42 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [guidesOpen, setGuidesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 40);
+
+      // Mobile only: hide on scroll down, show on scroll up
+      if (window.innerWidth < 1024) {
+        if (currentY > lastScrollY.current && currentY > 80) {
+          setHidden(true);
+          setIsOpen(false);
+        } else if (currentY < lastScrollY.current - 8) {
+          setHidden(false);
+        }
+      }
+
+      lastScrollY.current = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        ${scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"}
+        ${hidden ? "-translate-y-full" : "translate-y-0"}
+      `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-40 lg:h-52">
+        <div className={`flex items-center justify-between transition-all duration-300 ${
+          scrolled ? "h-16 lg:h-20" : "h-40 lg:h-52"
+        }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -49,7 +68,9 @@ export default function Navbar() {
               alt="CharMarie Salon"
               width={480}
               height={180}
-              className="h-36 lg:h-48 w-auto"
+              className={`w-auto transition-all duration-300 ${
+                scrolled ? "h-10 lg:h-14" : "h-36 lg:h-48"
+              }`}
               priority
             />
           </Link>
