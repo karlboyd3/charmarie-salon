@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 
 const photos = [
-  "/bridal/wedding-1.avif",
   "/bridal/wedding-2.avif",
   "/bridal/wedding-3.avif",
   "/bridal/wedding-4.avif",
@@ -37,8 +36,7 @@ export default function Bridal() {
                 key={photo}
                 src={photo}
                 alt="Bridal hair styling at CharMarie Salon"
-                style={i === 0 ? { transform: "scale(0.8)" } : undefined}
-                className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
+className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
                   i === current ? "opacity-100" : "opacity-0"
                 }`}
               />
