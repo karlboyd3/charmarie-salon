@@ -30,14 +30,14 @@ export default function Bridal() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
           {/* Left: rotating photos */}
-          <div className="relative min-h-96 lg:min-h-full overflow-hidden bg-[#1a1108]">
+          <div className="relative min-h-96 lg:min-h-full overflow-hidden">
             {photos.map((photo, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 key={photo}
                 src={photo}
                 alt="Bridal hair styling at CharMarie Salon"
-                className={`absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-1000 ${
+                className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
                   i === current ? "opacity-100" : "opacity-0"
                 }`}
               />
