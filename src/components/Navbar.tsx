@@ -45,7 +45,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo-v2.png"
+              src="/logo-v5.png"
               alt="CharMarie Salon"
               width={160}
               height={48}
