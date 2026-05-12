@@ -41,7 +41,7 @@ export default function ServicesPage() {
 
       {/* Sticky category nav */}
       <nav className="sticky top-0 z-40 bg-white border-b border-espresso/10 shadow-sm overflow-x-auto">
-        <div className="max-w-7xl mx-auto px-4 flex gap-6 py-3 whitespace-nowrap justify-center">
+        <div className="max-w-7xl mx-auto px-6 flex gap-7 py-4 whitespace-nowrap justify-center">
           {[
             ["Cuts & Styling", "#cuts"],
             ["Color", "#color"],
@@ -52,7 +52,7 @@ export default function ServicesPage() {
             ["Body Waxing", "#waxing"],
             ["Makeup", "#makeup"],
           ].map(([label, href]) => (
-            <a key={href} href={href} className="font-sans text-sm text-muted hover:text-espresso transition-colors py-1">
+            <a key={href} href={href} className="font-sans text-sm text-muted hover:text-espresso transition-colors py-2 px-1">
               {label}
             </a>
           ))}
