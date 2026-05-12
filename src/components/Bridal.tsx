@@ -37,18 +37,11 @@ export default function Bridal() {
                 key={photo}
                 src={photo}
                 alt="Bridal hair styling at CharMarie Salon"
-                className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
+                className={`absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-1000 ${
                   i === current ? "opacity-100" : "opacity-0"
                 }`}
               />
             ))}
-            {/* Dark gradient for watermark text */}
-            <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent" />
-            <div className="absolute inset-0 flex items-end p-10">
-              <p className="font-display text-white/60 text-8xl font-semibold leading-none select-none">
-                Bridal
-              </p>
-            </div>
           </div>
 
           {/* Right: content */}
