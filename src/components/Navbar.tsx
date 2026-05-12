@@ -41,15 +41,15 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-28 lg:h-36">
+        <div className="flex items-center justify-between h-40 lg:h-52">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/logo-v5.png"
               alt="CharMarie Salon"
-              width={320}
-              height={120}
-              className="h-24 lg:h-32 w-auto"
+              width={480}
+              height={180}
+              className="h-36 lg:h-48 w-auto"
               priority
             />
           </Link>
