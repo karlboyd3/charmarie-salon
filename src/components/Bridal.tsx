@@ -1,17 +1,41 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
+const photos = [
+  "/bridal/1.avif",
+  // Drop more bridal photos into public/bridal/ and add paths here
+];
+
 export default function Bridal() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (photos.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrent((i) => (i + 1) % photos.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="bridal" className="bg-champagne-wash py-0 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
-          {/* Left: photo */}
+          {/* Left: rotating photos */}
           <div className="relative min-h-72 lg:min-h-full overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/bridal.avif"
-              alt="Bridal hair styling at CharMarie Salon"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-            />
-            {/* Subtle dark gradient at bottom for the watermark text */}
+            {photos.map((photo, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={photo}
+                src={photo}
+                alt="Bridal hair styling at CharMarie Salon"
+                className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
+                  i === current ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
+            {/* Dark gradient for watermark text */}
             <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent" />
             <div className="absolute inset-0 flex items-end p-10">
               <p className="font-display text-white/60 text-8xl font-semibold leading-none select-none">
