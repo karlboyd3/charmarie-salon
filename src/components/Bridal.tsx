@@ -3,8 +3,15 @@
 import { useState, useEffect } from "react";
 
 const photos = [
-  "/bridal/1.avif",
-  // Drop more bridal photos into public/bridal/ and add paths here
+  "/bridal/wedding-1.avif",
+  "/bridal/wedding-2.avif",
+  "/bridal/wedding-3.avif",
+  "/bridal/wedding-4.avif",
+  "/bridal/wedding-5.avif",
+  "/bridal/wedding-6.avif",
+  "/bridal/wedding-7.avif",
+  "/bridal/wedding-8.avif",
+  "/bridal/wedding-9.avif",
 ];
 
 export default function Bridal() {
