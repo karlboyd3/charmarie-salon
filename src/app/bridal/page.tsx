@@ -114,12 +114,25 @@ export default function BridalPage() {
             <p className="font-sans text-white/60 max-w-md mx-auto mb-8 text-sm leading-relaxed">
               We recommend booking 3–4 months in advance of your wedding date to allow time for a trial and any follow-up sessions.
             </p>
-            <a
-              href="/#contact"
-              className="inline-block font-sans font-medium bg-gold text-espresso px-8 py-4 rounded-full hover:bg-gold/90 transition-all hover:shadow-lg hover:-translate-y-0.5"
-            >
-              Start Your Bridal Inquiry →
-            </a>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="/#contact"
+                className="inline-block font-sans font-medium bg-gold text-espresso px-8 py-4 rounded-full hover:bg-gold/90 transition-all hover:shadow-lg hover:-translate-y-0.5"
+              >
+                Start Your Bridal Inquiry →
+              </a>
+              <a
+                href="/bridal-contract.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-sans text-sm text-white/70 border border-white/20 px-6 py-4 rounded-full hover:border-white/50 hover:text-white transition-all"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+                Bridal Contract
+              </a>
+            </div>
           </div>
         </div>
       </main>
