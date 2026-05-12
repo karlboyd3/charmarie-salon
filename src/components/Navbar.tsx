@@ -47,9 +47,9 @@ export default function Navbar() {
             <Image
               src="/logo-v5.png"
               alt="CharMarie Salon"
-              width={160}
-              height={48}
-              className="h-10 w-auto"
+              width={220}
+              height={72}
+              className="h-16 w-auto"
               priority
             />
           </Link>
