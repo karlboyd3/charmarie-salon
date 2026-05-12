@@ -37,7 +37,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="inline-block bg-white/95 rounded-lg px-3 py-1.5 mb-4">
-              <Image src="/logo.png" alt="CharMarie Salon" width={160} height={56} className="h-12 w-auto" />
+              <Image src="/logo-v2.png" alt="CharMarie Salon" width={160} height={56} className="h-12 w-auto" />
             </div>
             <p className="font-sans text-sm text-cream/50 leading-relaxed mb-4">
               Blacksburg&#39;s Premier Full-Service Salon

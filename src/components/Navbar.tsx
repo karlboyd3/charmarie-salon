@@ -48,7 +48,7 @@ export default function Navbar() {
               scrolled ? "bg-transparent" : "bg-white/95"
             }`}>
               <Image
-                src="/logo.png"
+                src="/logo-v2.png"
                 alt="CharMarie Salon"
                 width={160}
                 height={48}
@@ -137,7 +137,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t border-espresso/10 px-6 py-6 space-y-1 shadow-lg">
+        <div className="lg:hidden bg-white border-t border-espresso/10 px-6 py-6 space-y-1 shadow-lg overflow-y-auto max-h-[calc(100vh-4rem)]">
           {navLinks.map((link) => (
             <Link
               key={link.label}
