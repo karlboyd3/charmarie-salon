@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 
 const photos = [
-  "/bridal/wedding-2.avif",
   "/bridal/wedding-3.avif",
   "/bridal/wedding-5.avif",
   "/bridal/wedding-6.avif",
